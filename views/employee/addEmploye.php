@@ -11,7 +11,7 @@
 require "../../header.php";
 ?>
 
-<!-- Page Content (End of page content div is at footer.php)-->
+    <!-- Page Content (End of page content div is at footer.php)-->
 <div class="container">
 
     <!--        Insert Employee-->
@@ -264,6 +264,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $emp->account=$Eaccount;
     $emp->basicSal=$Ebasic;
     $emp->gender=$Gender;
+    //this is added for search in allEmployee.php
+    $emp->fullName=$Efname." ".$Emname." ".$Elname;
 
 
     $id = R::store( $emp );
